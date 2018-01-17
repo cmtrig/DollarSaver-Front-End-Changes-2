@@ -67,22 +67,40 @@ namespace DollarSaver.Web {
         protected global::System.Web.UI.HtmlControls.HtmlForm mainForm;
         
         /// <summary>
-        /// topperImage control.
+        /// Image5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image topperImage;
+        protected global::System.Web.UI.WebControls.Image Image5;
         
         /// <summary>
-        /// localSavingsImage control.
+        /// Image6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image localSavingsImage;
+        protected global::System.Web.UI.WebControls.Image Image6;
+        
+        /// <summary>
+        /// Image3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image3;
+        
+        /// <summary>
+        /// Image4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image4;
         
         /// <summary>
         /// stationUrlHolder control.
@@ -130,13 +148,13 @@ namespace DollarSaver.Web {
         protected global::System.Web.UI.WebControls.Image headerImage;
         
         /// <summary>
-        /// topMenu control.
+        /// NavMenu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DollarSaver.Web.controls.NavMenu topMenu;
+        protected global::DollarSaver.Web.controls.NavMenu NavMenu;
         
         /// <summary>
         /// messageHolder control.
@@ -236,6 +254,24 @@ namespace DollarSaver.Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink faqLink;
+        
+        /// <summary>
+        /// rssLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink rssLink;
+        
+        /// <summary>
+        /// Name1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DollarSaver.Web.controls.Name Name1;
         
         /// <summary>
         /// endYearLabel control.

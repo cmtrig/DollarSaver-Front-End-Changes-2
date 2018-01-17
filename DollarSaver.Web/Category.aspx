@@ -3,13 +3,12 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-
+<div class="page-padding">
 <div class="uk-align-center">
-
             <div class="uk-margin-small">
-                
-                        <asp:Label ID="categoryLabel" runat="server" CssClass="headingOne" /><br />
-                        <p style="font-size: 12px;">Save here on certificates from local businesses. Scroll down to find the business you want then click it to see how much you'll save!</p> 
+  
+                        <asp:Label ID="categoryLabel" runat="server" CssClass="uk-h2" />
+                        <p>Save here on certificates from local businesses. Scroll down to find the business you want then click it to see how much you'll save!</p> 
                     </div>
                  
                 <asp:PlaceHolder ID="noAdvertisersFoundHolder" runat="server">
@@ -45,5 +44,5 @@
                     
             
 </div>
-
+</div>
 </asp:Content>

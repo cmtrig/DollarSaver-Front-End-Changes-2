@@ -4,28 +4,28 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
 <div class="uk-align-center">
-   <div class="uk-grid">
-	 <div class="uk-width-1-4 heading_two">&#8226; Your Cart</div>
-     <div class="uk-width-1-4 heading_two_gray">&#8226; E-mail Info</div>
-     <div class="uk-width-1-4 heading_two_gray">&#8226; Payment Info</div>
-     <div class="uk-width-1-4 heading_two_gray">&#8226; Print Your Certificates</div>
-
-	<div class="uk-width-medium-1-3">
-<table cellpadding="5" cellspacing="0" border="0" width="100%">
-                            <tr>
-                                <td class="heading_two" align="left">
-                                    Your Cart
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="left" style="padding: 0px;">
-                                    <DollarSaver:LineItemDetail ID="lineItemDetail" runat="server" />
-                                </td>
-                            </tr>
-                        </table>
-
-               
-                        <table cellpadding="5" cellspacing="0" border="0" class="ds_table" width="100%">
+   <ul class="uk-grid uk-align-center">
+	 <li class="uk-width-1-4 heading_two_gray">Your Cart</li>
+     <li class="uk-width-1-4 heading_two_gray"> E-mail Info</li>
+     <li class="uk-width-1-4 heading_two">Payment Info</li>
+     <li class="uk-width-1-4 heading_two_gray">Print Certificates</li>
+	</ul>
+    <hr />
+    <div class="uk-align-center" style="max-width: 600px;">
+    <table cellpadding="5" cellspacing="0" border="0" width="100%">
+    <tr>
+    <td class="heading_two" align="left"> Your Cart
+        </td>
+         </tr>
+         <tr>
+       <td align="left" style="padding: 0px;">
+       <DollarSaver:LineItemDetail ID="lineItemDetail" runat="server" />
+       </td>
+       </tr>
+    </table>
+    </div>
+     <div class="uk-align-center" style="max-width: 600px;">      
+     <table cellpadding="5" cellspacing="0" border="0" class="ds_table" width="100%">
                             <tr>
                                 <td class="heading_two greenback" align="left">
                                     Email Address
@@ -36,11 +36,10 @@
                                     <asp:Label ID="customerEmailLabel" runat="server" /> 
                                 </td>
                             </tr>
-                        </table>
-
-                <asp:PlaceHolder ID="shippingHolder" runat="server">
-              
-
+            </table>
+    </div>
+    <div class="uk-align-center" style="max-width: 600px;">
+       <asp:PlaceHolder ID="shippingHolder" runat="server">
                         <table cellpadding="5" cellspacing="0" border="0" class="ds_table" width="100%">
                             <tr>
                                 <td class="heading_two greenback" align="left">
@@ -53,10 +52,10 @@
                                 </td>
                             </tr>
                         </table>
-                    
                 </asp:PlaceHolder>
-               
-                         <table cellpadding="5" cellspacing="0" border="0" class="ds_table" width="100%">
+    </div>
+    <div class="uk-align-center" style="max-width: 600px;">
+     <table cellpadding="5" cellspacing="0" border="0" class="ds_table" width="100%">
                             <tr>
                                 <td colspan="2" class="heading_two greenback" align="left">
                                     Payment Information
@@ -122,9 +121,9 @@
                                 </td>
                             </tr>
                         </table>
-
-                    
-                         <table cellpadding="5" cellspacing="0" border="0" class="ds_table" width="100%">
+    </div>
+    <div class="uk-align-center" style="max-width: 600px;">
+     <table cellpadding="5" cellspacing="0" border="0" class="ds_table" width="100%">
                             <tr>
                                 <td colspan="2" class="heading_two greenback" align="left">
                                     Billing Address
@@ -168,17 +167,12 @@
                                 </td>
                             </tr>
                         </table>
-</div>
-</div>
-                   
-                    <div class="uk-alert uk-alert-danger">
-                        Your purchase will be listed as <strong>"DollarSaver 2072299178"</strong>on your credit card statement
-                    </div>
-</div>
-                <div class="uk-text-right">
-                        <asp:Button ID="placeOrderButton" Text="Place Order" Style="font-weight: bold;" runat="server" />
-                    </div>
-               
-
-
+    </div>
+    <div class="uk-align-center uk-alert uk-alert-danger" style="max-width: 600px;">                 
+      Your purchase will be listed as <strong>"DollarSaver 2072299178"</strong>on your credit card statement
+    </div>
+    <div class="uk-text-center uk-margin-bottom">
+     <asp:Button ID="placeOrderButton" CssClass="uk-button uk-button-primary" Text="Place Order" runat="server" />
+    </div>
+   </div>
 </asp:Content>

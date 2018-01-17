@@ -3,118 +3,91 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head id="Head1" runat="server">
 <title>DollarSaver - Sites</title>
-
-<link id="dsStyleSheet" rel="stylesheet" type="text/css" href="~/styles/dollarsaver.css" runat="server" />
+<link id="CSS3StyleSheet" rel="stylesheet" href="~/styles/theme.css" type="text/css" runat="server" />
+<link id="dsStyleSheet" rel="stylesheet" type="text/css" href="~/styles/custom.css" runat="server" />
 <link id="stationStyleSheet" rel="stylesheet" type="text/css" href="~/styles/station.css" runat="server" />
-
 </head>
-
 <body>
-
 <form id="mainForm" runat="server">
 
-<table cellpadding="0" cellspacing="0" border="0" width="100%">
-    <tr>
-        <td align="center">
+    <div class="tm-block-toolbar" data-uk-sticky="{media: 767}">
+       <div class="uk-container uk-container-center">
+         <div class="tm-toolbar-container">
+             <div class="uk-hidden-small">
+             <asp:Image ID="Image5" ImageUrl="~/images/ds_logo_header.gif" AlternateText="DollarSaver" runat="server" /> <asp:Image ID="Image6" ImageUrl="~/images/local.gif" AlternateText="DollarSaver" runat="server"  />
+             </div>
+             <div class="uk-align-center uk-visible-small">
+             <asp:Image ID="Image3" ImageUrl="~/images/ds_logo_header.gif" AlternateText="DollarSaver" runat="server" />
+             <asp:Image ID="Image4" ImageUrl="~/images/local.gif" AlternateText="DollarSaver" runat="server"  />
+            </div> 
+         </div>
+     </div>
+   </div>
+
+   <div class="uk-container uk-container-center">
+    <div id="tm-main" class="tm-block-main">
+    <div class="uk-margin-large">
+      
+     <main id="tm-content" class="tm-content">
+        <h1 class="uk-h1">Please select your local <DollarSaver:Name runat="server" /> site</h1>
+       <div class="uk-margin-left">
+            <asp:PlaceHolder ID="messageHolder" runat="server">
+             <div class="uk-panel uk-align-center">
+                <table width="80%" cellpadding="5" cellspacing="0" class="message">
+                 <tr>
+                 <td align="center"><asp:Label ID="messageLabel" runat="server" /></td>
+                 </tr>
+                 </table>
+       </div>
+       </asp:PlaceHolder>
+       <asp:PlaceHolder ID="errorMessageHolder" runat="server">
+       <div class="uk-panel uk-align-center">
+       <table width="80%" cellpadding="5" cellspacing="0" class="error_message">
+       <tr>
+       <td align="center"><asp:Label ID="errorMessageLabel" runat="server" /></td>
+       </tr>
+      </table>
+      </div>
+       </asp:PlaceHolder>
+     </div>
+
+    
+       <div class="uk-container uk-container-center">
+        <div class="uk-column-medium-1-2">
+        <asp:Repeater ID="stationRepeater" runat="server">
+        <HeaderTemplate>
+        </HeaderTemplate>
+            
+         <ItemTemplate>
+        <div class="uk-margin">
+	      <table cellpadding="5" cellspacing="0" border="0">
+          <tr>
+            <td valign="middle" align="center" style="width: 130px;">
+           <asp:HyperLink ID="logoLink" runat="server">
+            <asp:Image ID="logoImage" Width="125" Height="75" BorderWidth="1" BorderColor="#404040" runat="server" /> 
+            </asp:HyperLink>
+            </td> 
+            <td valign="middle" align="left">
+          <asp:HyperLink ID="stationLink" CssClass="uk-h3" runat="server" /><br />
+          <asp:Label ID="addressLabel" runat="server" />
+           </td>
+           </tr>
+         </table>
+         </div>
+        </ItemTemplate>
         
-            <table cellpadding="0" cellspacing="0" border="0" style="background-color: #FEFEFA; border-left: solid 1px #A0A0A0; border-right: solid 1px #A0A0A0; border-bottom: solid 1px #A0A0A0;" width="800">
-                <tr>
-                    <td align="center">
-
-                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                            <tr>
-                                <td>
-                                    <table cellpadding="10" cellspacing="0" border="0">
-                                        <tr>
-                                            <td valign="middle" align="left">
-                                                <asp:Image ID="topperImage" ImageUrl="~/images/ds_logo_header.gif" AlternateText="DollarSaver" runat="server" />
-                                            </td>
-                                            <td valign="middle">
-                                                 <asp:Image ID="localSavingsImage" ImageUrl="~/images/local.gif" AlternateText="DollarSaver" runat="server"  />
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="center" style="padding: 10px; border-top: solid 1px #808080;">
-
-                                    <table cellpadding="5" cellspacing="0" border="0" width="100%">
-                                        <asp:PlaceHolder ID="messageHolder" runat="server">
-                                        <tr>
-                                            <td style="10px" align="center">
-                                                <table width="80%" cellpadding="5" cellspacing="0" class="message">
-                                                    <tr>
-                                                        <td align="center"><asp:Label ID="messageLabel" runat="server" /></td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        </asp:PlaceHolder>
-                                        <asp:PlaceHolder ID="errorMessageHolder" runat="server">
-                                        <tr>
-                                            <td style="10px" align="center">
-                                                <table width="80%" cellpadding="5" cellspacing="0" class="error_message">
-                                                    <tr>
-                                                        <td align="center"><asp:Label ID="errorMessageLabel" runat="server" /></td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        </asp:PlaceHolder>
-                                        <tr>
-                                            <td align="left">
-                                                <span class="headingOne">Please select your local <DollarSaver:Name runat="server" /> site</span>
-                                            </td>
-                                        </tr>
-                                            
-                                        <asp:Repeater ID="stationRepeater" runat="server">
-                                        <HeaderTemplate>
-                                        </HeaderTemplate>
-                                        <ItemTemplate>
-                                            <tr>
-                                                <td align="left">
-                                                    <table cellpadding="5" cellspacing="0" border="0">
-                                                        <tr>
-                                                            <td valign="middle" align="center" style="width: 130px;">
-                                                                <asp:HyperLink ID="logoLink" runat="server">
-                                                                <asp:Image ID="logoImage" Width="125" Height="75" BorderWidth="1" BorderColor="#404040" runat="server" /> 
-                                                                </asp:HyperLink>
-                                                            </td>
-                                                            <td valign="middle" align="left">
-                                                                <asp:HyperLink ID="stationLink" Style="font-size: 18px;" runat="server" /><br />
-                                                                <asp:Label ID="addressLabel" runat="server" />
-                                                            </td>
-                                                        </tr>
-                                                    
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </ItemTemplate>
-                                        <FooterTemplate>
-                                        </FooterTemplate>
-                                            
-                                        </asp:Repeater>
-                                            
-                                        <tr>
-                                            <td align="center" style="padding: 10px; font-size: 10px; color: #6A9BE0;">
-                                                &copy; <DollarSaver:Name ID="Name1" runat="server" /> 2006 - <asp:Label ID="endYearLabel" runat="server" /> Rights Reserved
-                                            </td>
-                                        </tr>
-                                    </table>
-
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>
-
+          <FooterTemplate>
+          </FooterTemplate>
+          </asp:Repeater>
+        </div>
+        </div>
+      <div class="uk-container uk-container-center uk-text-center uk-text-small uk-margin-top">
+      &copy; <DollarSaver:Name ID="Name1" runat="server" /> 2006 - <asp:Label ID="endYearLabel" runat="server" /> Rights Reserved
+      </div>
+    </main> 
+    </div>
+   </div>
+  </div>
 </form>
-
 </body>
-
 </html>

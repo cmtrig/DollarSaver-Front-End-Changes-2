@@ -3,12 +3,12 @@
 
 
 <div class="uk-align-center">
-   <div class="uk-grid">
-	 <div class="uk-width-1-4 heading_two">&#8226; Your Cart</div>
-     <div class="uk-width-1-4 heading_two_gray">&#8226; E-mail Info</div>
-     <div class="uk-width-1-4 heading_two_gray">&#8226; Payment Info</div>
-     <div class="uk-width-1-4 heading_two_gray">&#8226; Print Your Certificates</div>
-	</div>
+   <ul class="uk-grid uk-align-center">
+	 <li class="uk-width-1-4 heading_two">Your Cart</li>
+     <li class="uk-width-1-4 heading_two_gray"> E-mail Info</li>
+     <li class="uk-width-1-4 heading_two_gray">Payment Info</li>
+     <li class="uk-width-1-4 heading_two_gray">Print Certificates</li>
+	</ul>
            
     <asp:PlaceHolder ID="cookieMessageHolder" runat="server">
       <table cellpadding="7" width="90%" border="0" style="border: solid 1px #FF4040; background-color: #FFFE90;">
@@ -31,12 +31,12 @@
        
     </asp:PlaceHolder>
    
-	<div class="uk-panel">
+	<div class="page-padding">
                 <asp:PlaceHolder ID="itemHolder" runat="server" >
                
                         <table cellpadding="5" cellspacing="0" border="0" width="100%" class="cart">
                             <tr>
-                                <td class="greenback">&nbsp;</td>
+                                
                                 <td align="left" style="font-weight: bold;" class="greenback">Certificates</td>
                                 <td align="center" style="font-weight: bold;" class="greenback">Price</td>
                                 <td align="center" style="font-weight: bold;" class="greenback">Qty</td>
@@ -47,15 +47,16 @@
                             </HeaderTemplate>
                             <ItemTemplate>
                                 <tr> <!-- E8F0E0; -->
-                                    <td align="center">
-                                        <asp:LinkButton ID="removeButton" CommandName="remove" Text="Remove" Style="font-size: 12px;" runat="server" />
-                                    </td>
+                                    
                                     <td align="left">
                                         <asp:Label ID="certificateNameLabel" runat="server" />
                                         <asp:HiddenField ID="lineItemIdHidden" runat="server" />
                                     </td>
                                     <td align="right"><asp:Label ID="priceLabel" runat="server" /></td>
-                                    <td align="center"><asp:TextBox ID="qtyBox" Columns="2" style="text-align: right" runat="server" /></td>
+                                    <td align="center"><asp:TextBox ID="qtyBox" Columns="2" style="text-align: right" runat="server" /><br />
+                                        <asp:LinkButton ID="removeButton" CommandName="remove" Text="Remove" Style="font-size: 10px;" runat="server" />
+
+                                    </td>
                                     <td align="right"><asp:Label ID="totalLabel" runat="server" /></td>
                                 </tr>
                                 
@@ -70,9 +71,9 @@
                             </asp:Repeater>
                             
                             <tr>
-                                <td colspan="3" align="right"></td>
-                                <td align="center"><asp:Button ID="updateButton" Text="Update" CssClass="small_button" runat="server" /></td>
-                                <td></td>
+                                <td colspan="3" align="right"><asp:Button ID="updateButton" Text="Update QTY" CssClass="small_button" runat="server" /></td>
+                                <td align="center"></td>
+                               
                             </tr>
                             <!--
                             <tr>
@@ -106,7 +107,8 @@
 		</div>
                 </asp:PlaceHolder>
                 <asp:PlaceHolder ID="emptyCartHolder" runat="server">
-                <div class="uk-margin-large-bottom">
+                <div class="uk-panel uk-panel-space uk-text-center">
+                    <asp:Image AlternateText="Cart" ImageUrl="~/images/cart2.png" runat="server" /><br />
                         <em>Your cart is empty. Start shopping!</em>
                     </div>    
                 

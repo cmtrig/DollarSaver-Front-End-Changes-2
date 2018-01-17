@@ -21,58 +21,48 @@ function popWindow(url) {
 //-->
 </script>
 
-<table cellpadding="0" cellspacing="0" border="0" width="100%">
-    <tr>
-        <td align="center" style="padding: 0px;">
-            <table cellpadding="10" cellspacing="0" border="0">
-                <tr>
-                    <td class="heading_two_gray">&#8226; Your Cart</td>
-                    <td class="heading_two">&#8226; E-mail Info</td>
-                    <td class="heading_two_gray">&#8226; Payment Info</td>
-                    <td class="heading_two_gray">&#8226; Print Your Certificates</td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    <tr>
-        <td align="center">
-            <table cellpadding="10" cellspacing="0" border="0" width="600px">
-                <asp:PlaceHolder ID="viewAndPrintHolder" runat="server">
-                <tr>
-                    <td class="headingOne" align="center">
+<div class="uk-align-center">
+   <ul class="uk-grid uk-align-center">
+	 <li class="uk-width-1-4 heading_two_gray">Your Cart</li>
+     <li class="uk-width-1-4 heading_two"> E-mail Info</li>
+     <li class="uk-width-1-4 heading_two_gray">Payment Info</li>
+     <li class="uk-width-1-4 heading_two_gray">Print Certificates</li>
+	</ul>
+    <hr />
+  <div class="uk-align-center" style="max-width: 600px;">
+       <asp:PlaceHolder ID="viewAndPrintHolder" runat="server">
+                <h2 class="uk-h2 uk-text-center">
                         View &amp; Print your certificates on the final checkout page
-                    </td>
-                </tr>
+                    </h2>
+               
                 </asp:PlaceHolder>
                 <asp:PlaceHolder ID="noDeliveryHolder" runat="server">
-                <tr>
-                    <td align="center" style="font-style: italic; color: #4040FF;">
-                        No postal delivery, print your certificates directly from your computer!
-                    </td>
-                </tr>
+                <div class="uk-text-center uk-text-success">
+                    <em>No postal delivery, print your certificates directly from your computer!</em>
+                </div>
                 </asp:PlaceHolder>
-                <tr>
-                    <td align="center" style="padding: 10px;">
-                         <table cellpadding="5" cellspacing="0" border="0" width="550" class="ds_table">
-                            <tr>
-                                <td colspan="2" class="heading_two greenback" align="left">
-                                    Enter E-mail Address
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="small_text" colspan="2" align="left">
-                                    A copy of your certificate(s) will also be sent to the following e-mail address
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="form_field" nowrap width="150">E-mail:</td>
-                                <td align="left">
-                                    <asp:TextBox ID="emailBox" Columns="40" MaxLength="320" runat="server" />
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="emailBox" Text="* Required" Display="Dynamic" runat="server" /><br />
-                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ControlToValidate="emailBox" Text="* Invalid E-mail Address" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic" runat="server" />   
-                                </td>
-                            </tr>
-                            <tr>
+      </div>
+               <div class="uk-align-center" style="max-width: 480px;">
+                   <table cellpadding="5" cellspacing="0" border="0" width="100%" class="ds_table">
+                     <tr>
+                        <td colspan="2" class="heading_two greenback" align="left">
+                              Enter E-mail Address
+                        </td>
+                      </tr>
+                    <tr>
+                <td class="small_text" colspan="2" align="left">
+                     A copy of your certificate(s) will also be sent to the following e-mail address
+                   </td>
+                </tr>
+             <tr>
+                 <td class="form_field" nowrap width="110">E-mail:</td>
+               <td align="left">
+                   <asp:TextBox ID="emailBox" Columns="40" MaxLength="320" runat="server" />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="emailBox" Text="* Required" Display="Dynamic" runat="server" /><br />
+                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ControlToValidate="emailBox" Text="* Invalid E-mail Address" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic" runat="server" />   
+           </td>
+           </tr>
+              <tr>
                                 <td class="form_field" nowrap>Confirm E-mail:</td>
                                 <td align="left">
                                     <asp:TextBox ID="confirmEmailBox" Columns="40" MaxLength="320" runat="server" />
@@ -81,25 +71,19 @@ function popWindow(url) {
                                 </td>
                             </tr>
                         </table>
-                    </td>
-                   
-                
-                </tr>
-                 <asp:PlaceHolder ID="pickUpHolder" runat="server">
-                <tr>
-                    <td align="center">
-                        <table cellpadding="15" cellspacing="0" border="0" class="message" width="550" >
+                    </div>
+          <asp:PlaceHolder ID="pickUpHolder" runat="server" >
+               <div class="uk-align-center" style="max-width: 600px;">
+                  <table cellpadding="15" cellspacing="0" border="0" class="message" >
                             <tr>
                                 <td>
                                     Your order contains certificates that cannot be printed at your computer and must be picked up.<br />       
                                 </td>
                             </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center" style="padding: 10px;">
-                        <table cellpadding="5" cellspacing="0" border="0" width="550" class="ds_table">
+                   </table>
+               </div>
+                <div class="uk-align-center" style="max-width: 600px;">
+                        <table cellpadding="5" cellspacing="0" border="0" class="ds_table">
                         
                             <tr>
                                 <td style="font-weight: bold;" class="greenback" width="300px" align="left">Certificates that must be picked up</td>
@@ -131,15 +115,12 @@ function popWindow(url) {
                                 
                             </asp:Repeater>
                         </table>
-                    </td>
-                </tr>
+                </div>
+            </asp:PlaceHolder>
                 
-                </asp:PlaceHolder>
-                
-                <asp:PlaceHolder ID="shippingHolder" runat="server">
-                <tr>
-                    <td align="center">
-                        <table cellpadding="15" cellspacing="0" border="0" class="message" width="550" >
+              <asp:PlaceHolder ID="shippingHolder" runat="server">
+               <div class="uk-align-center" style="max-width: 600px;">
+                        <table cellpadding="15" cellspacing="0" border="0" class="message" >
                             <tr>
                                 <td>
                                     Your order contains certificates that cannot be printed at your computer and must be mailed. Please provide your shipping address below.<br />
@@ -148,11 +129,9 @@ function popWindow(url) {
                                 </td>
                             </tr>
                         </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center" style="padding: 10px;">
-                        <table cellpadding="5" cellspacing="0" border="0" width="550" class="ds_table">
+              </div>
+                <div class="uk-align-center" style="max-width: 600px;">
+                        <table cellpadding="5" cellspacing="0" border="0" class="ds_table">
                         
                             <tr>
                                 <td style="font-weight: bold;" class="greenback" width="300px" align="left">Certificates that will be mailed</td>
@@ -183,11 +162,9 @@ function popWindow(url) {
                                 
                             </asp:Repeater>
                         </table>
-                    </td>
-                </tr>
-                <tr>                    
-                    <td align="center" style="padding: 10px;">
-                         <table cellpadding="5" cellspacing="0" border="0" width="550" class="ds_table">
+                </div>
+                <div class="uk-align-center" style="max-width: 600px;">
+                         <table cellpadding="5" cellspacing="0" border="0" class="ds_table">
                             <tr>
                                 <td colspan="2" class="heading_two greenback" align="left">
                                     Shipping Address
@@ -251,37 +228,29 @@ function popWindow(url) {
                                 </td>
                             </tr>
                         </table>
-                    </td>
-                </tr>
+                </div>
                 </asp:PlaceHolder>
-                <tr>
-                    <td align="left" style="padding-left: 167px;">
-                        <table cellpadding="5" cellspacing="0" border="0">
-                            <tr>
-                                <td>
+
+    <div class="uk-width-medium-1-2 uk-container-center">
+        <div class="uk-panel uk-panel-box">
+               <div class="uk-margin-small">
                                     <asp:CheckBox ID="rememberMeBox" runat="server" /> 
                                     Yes, remember my info on this computer
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
+                 </div>
+                 <div class="uk-margin-small">
                                     <asp:CheckBox ID="addToMailingListBox" runat="server" /> 
                                     Yes, I'd like to receive e-mails about future deals
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="padding-top: 20px;">
+                  </div>
+                  <div class="uk-margin-top">
                                     <asp:CheckBox ID="agreeToTermsBox" runat="server" /> 
                                     I agree to the <a href="TermsPopup.aspx" onclick="return popWindow('TermsPopup.aspx')">Terms and Conditions</a>
                                     <asp:CustomValidator ID="agreeToTermsBoxCV" runat="server" Display="static" ClientValidationFunction="agreeToTermsBoxCV_ClientValidate"
                                         Text="* Required" OnServerValidate="agreeToTermsBoxCV_ServerValidate" />
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="right" style="padding-top: 15px;">
+                 </div>
+                </div>
+            
+            
+    <div class="uk-margin-top">
                         <table cellpadding="10" cellspacing="0" border="0">
                             <tr>
                                 <td align="right" valign="middle" style="border-bottom: solid 1px #D0D0D0;">
@@ -300,19 +269,13 @@ function popWindow(url) {
                                 </td>
                             </tr>
                         </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="right">
+                </div>
+                
+                <div class="uk-align-right">
                        <asp:Image ID="Image1" AlternateText="Visa, MasterCard, AmEx, Discover & PayPal" ImageUrl="~/images/payment_logos.gif" BorderWidth="0" runat="server" />
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    
-</table>
-
+                    </div>
+ </div>              
+</div>
 
 </asp:Content>
 

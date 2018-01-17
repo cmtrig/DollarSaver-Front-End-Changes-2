@@ -41,7 +41,8 @@
   <a href="#">Clients</a>
   <a href="#">Contact</a>
   
-</div><div class="tm-block-toolbar" data-uk-sticky="{media: 767}">
+</div>
+    <div class="tm-block-toolbar">
        <div class="uk-container uk-container-center">
          <div class="tm-toolbar-container">
            <div class="uk-grid">
@@ -49,10 +50,11 @@
              <div class="uk-hidden-small">
              <asp:Image ID="Image5" ImageUrl="~/images/ds_logo_header.gif" AlternateText="DollarSaver" runat="server" /> <asp:Image ID="Image6" ImageUrl="~/images/local.gif" AlternateText="DollarSaver" runat="server"  />
              </div>
-             <div class="uk-align-center uk-visible-small">
+             <div class="uk-visible-small">
 <span class="uk-navbar-toggle uk-visible-small" style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;</span>
-             <asp:Image ID="Image3" ImageUrl="~/images/ds_logo_header.gif" AlternateText="DollarSaver" runat="server" />
+             <div class="uk-text-center"><asp:Image ID="Image3" ImageUrl="~/images/ds_logo_header.gif" AlternateText="DollarSaver" runat="server" />
              <asp:Image ID="Image4" ImageUrl="~/images/local.gif" AlternateText="DollarSaver" runat="server"  />
+             </div>
              </div> 
             </div>
            <div class="uk-width-medium-1-2">
@@ -69,7 +71,9 @@
           </div>
         </div>
        </div>
-             <div class="uk-container uk-container-center">
+             
+    
+    <div class="uk-container uk-container-center">
              <div class="uk-align-center uk-hidden-small uk-margin-remove">
                  <asp:HyperLink ID="headerLink" runat="server">
                                     <asp:Image ID="headerImage" ImageUrl="~/images/header.jpg" BorderWidth="0" runat="server" />
@@ -90,27 +94,25 @@
     <div class="tm-middle">
 
     <main id="tm-content" class="tm-content">
-        
-           <div class="uk-width-1-1">
+         
             <asp:PlaceHolder ID="messageHolder" runat="server">
-             <div class="uk-panel uk-align-center">
-                <table width="80%" cellpadding="5" cellspacing="0" class="message">
+             <div class="uk-panel uk-panel-box">
+                <table width="80%" cellpadding="5" cellspacing="0" class="message uk-align-center">
                  <tr>
-                 <td align="center"><asp:Label ID="messageLabel" runat="server" /></td>
+                 <td><div class="uk-text-center"><asp:Label ID="messageLabel" runat="server" /></div></td>
                  </tr>
                  </table>
                </div>
               </asp:PlaceHolder>
               <asp:PlaceHolder ID="errorMessageHolder" runat="server">
-              <div class="uk-panel uk-align-center">
-              <table width="80%" cellpadding="5" cellspacing="0" class="error_message">
+              
+              <table width="80%" cellpadding="5" cellspacing="0" class="error_message uk-align-center">
               <tr>
-              <td align="center"><asp:Label ID="errorMessageLabel" runat="server" /></td>
+              <td><div class="uk-text-center"><asp:Label ID="errorMessageLabel" runat="server" /></div></td>
               </tr>
               </table>
-              </div>
+            
               </asp:PlaceHolder>
-            </div>
 
             <div class="uk-panel">
                     
@@ -158,7 +160,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="~/styles/js/uikit.js"></script>
     <script src="~/styles/js/theme.js"></script>
-    <script src="~/styles/js/sticky.js"></script>
     <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";

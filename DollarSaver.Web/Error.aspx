@@ -3,8 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
 <title>DollarSaver - Error!</title>
-<link rel="Stylesheet" type="text/css" href="/styles/dollarsaver.css" />
+<link rel="Stylesheet" type="text/css" href="/styles/theme.css.css" />
+<link rel="Stylesheet" type="text/css" href="/styles/custom.css" />
 <link rel="Stylesheet" type="text/css" href="/styles/station.css" />
+
 </head>
 
 <body>
@@ -26,12 +28,12 @@
                 </tr>
                 <tr>
                     <td align="center" style="padding: 10px;">
-                        <table cellpadding="10" cellspacing="0" border="0" width="500">
+                        <table cellpadding="10" cellspacing="0" border="0" width="480">
                             <tr>
-                                <td align="left" style="font-size: 18px;">An Error Has Occurred! What Happened?!</td>
+                                <td align="left" style="font-size: 18px;">That's an error.</td>
                             </tr>
                             <tr>
-                                <td align="left"><asp:Label id="errorLabel" Text="Hmm...the cause of the error is not known." CssClass="bigRed" runat="server" /></td>
+                                <td align="left"><asp:Label id="errorLabel" Text="Its not the end of the world, though. Try finding what you need on the hoem page." CssClass="bigRed" runat="server" /></td>
                             </tr>
                         </table>
                     </td>

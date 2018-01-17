@@ -41,7 +41,7 @@
   <a href="#">Contact</a>
   
 </div>
-        <div class="tm-block-toolbar" data-uk-sticky="{media: 767}">
+        <div class="tm-block-toolbar">
        <div class="uk-container uk-container-center">
          <div class="tm-toolbar-container">
            <div class="uk-grid">
@@ -69,27 +69,20 @@
           </div>
         </div>
        </div>
-             <div class="uk-container uk-container-center">
+          <div class="uk-container uk-container-center">
              <div class="uk-align-center uk-hidden-small uk-margin-remove">
-                                            <asp:HyperLink ID="headerLink" runat="server">
-                                                <asp:Image ID="headerImage" ImageUrl="~/images/header.jpg" BorderWidth="0" runat="server" />
-                                            </asp:HyperLink>
-                                        </div> 
-                
-
-            </div>
-        
-        
+             <asp:HyperLink ID="headerLink" runat="server">
+             <asp:Image ID="headerImage" ImageUrl="~/images/header.jpg" BorderWidth="0" runat="server" />
+              </asp:HyperLink>
+             </div> 
+           </div>
         <div class="uk-container uk-container-center">
     <div id="tm-main" class="tm-block-main">
     <div class="tm-middle">
-
     <main id="tm-content" class="tm-content">
-        
            <div class="uk-width-1-1">
             <asp:PlaceHolder ID="messageHolder" runat="server">
              <div class="uk-panel uk-align-center">
-           
                  <table width="80%" cellpadding="5" cellspacing="0" class="message">
                                         <tr>
                                             <td align="center">
@@ -97,7 +90,7 @@
                                             </td>
                                         </tr>
                                     </table>
-                </div>
+             </div>
                         </asp:PlaceHolder>
                         <asp:PlaceHolder ID="errorMessageHolder" runat="server">
                             <div class="uk-panel uk-align-center">
