@@ -1,0 +1,346 @@
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="DollarSaver.Web.Admin.admin" CodeBehind="admin.master.cs" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>DollarSaver</title>
+
+    <link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/ds-material-dashboard.css" rel="stylesheet" />
+    <link href="assets/css/admin.css" rel="stylesheet" />
+
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body runat="server">
+    <form id="form1" runat="server">
+        <div class="wrapper">
+            <div class="sidebar" data-active-color="orange" data-background-color="black">
+
+                <div class="logo">
+                    <asp:HyperLink NavigateUrl="~/admin/Default.aspx" class="simple-text logo-mini" runat="server">DS
+                    </asp:HyperLink>
+                    <asp:HyperLink NavigateUrl="~/admin/Default.aspx" class="simple-text logo-normal" runat="server">Dollar Saver
+                    </asp:HyperLink>
+                </div>
+                <div class="sidebar-wrapper">
+                    <div class="user">
+                        <div class="photo">
+                            <img src="assets/images/ds_logo_small.jpg" />
+                        </div>
+                        <div class="info">
+                            <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+                                <asp:Label ID="userIdLabel" runat="server">
+                                    <b class="caret"></b>
+                                </asp:Label>
+                            </a>
+                            <div class="clearfix"></div>
+                            <div class="collapse" id="collapseExample">
+                                <ul class="nav">
+                                    <li>
+                                        <asp:HyperLink ID="logoutLink" NavigateUrl="~/admin/Login.aspx?logout=Y" runat="server">
+                                            <i class="material-icons">power_settings_new</i>
+                                            <span class="sidebar-normal">Log out </span>
+                                        </asp:HyperLink>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="nav">
+                        <li id="menuItemDashboard" runat="server">
+                            <asp:HyperLink NavigateUrl="~/admin/Default.aspx" runat="server">
+                                <i class="material-icons">dashboard</i>
+                                <p>
+                                    <asp:Label ID="stationLabel" runat="server" />
+                                </p>
+                                <p>
+                                    <asp:Label ID="siteTypeLabel" runat="server" />
+
+                                </p>
+                            </asp:HyperLink>
+                        </li>
+
+                        <li id="menuItemStation" runat="server">
+                            <a data-toggle="collapse" href="#stationElements">
+                                <i class="material-icons">settings_input_antenna</i>
+                                <p>
+                                    Station
+                                <b class="caret"></b>
+                                </p>
+                            </a>
+
+                            <div class="collapse" id="stationElements">
+                                <ul class="nav">
+                                    <li>
+                                        <asp:HyperLink NavigateUrl="~/admin/StationEdit.aspx" runat="server">
+                                            <span class="sidebar-mini">SE </span>
+                                            <span class="sidebar-normal">Edit Station </span>
+                                        </asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink NavigateUrl="~/admin/StationContent.aspx" runat="server">
+                                            <span class="sidebar-mini">SC </span>
+                                            <span class="sidebar-normal">Station Content</span>
+                                        </asp:HyperLink>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li id="menuItemUser" runat="server">
+                            <a data-toggle="collapse" href="#userElements">
+                                <i class="material-icons">account_circle</i>
+                                <p>
+                                    Users
+                                <b class="caret"></b>
+                                </p>
+                            </a>
+
+                            <div class="collapse" id="userElements">
+                                <ul class="nav">
+                                    <li>
+                                        <asp:HyperLink NavigateUrl="~/admin/AdminList.aspx" runat="server">
+                                            <span class="sidebar-mini">UL </span>
+                                            <span class="sidebar-normal">List Users</span>
+                                        </asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink NavigateUrl="~/admin/AdminEdit.aspx" runat="server">
+                                            <span class="sidebar-mini">UC </span>
+                                            <span class="sidebar-normal">Create Users</span>
+                                        </asp:HyperLink>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <%--Sales People--%>
+                        <li id="menuItemSalesPeople" runat="server">
+                            <asp:HyperLink NavigateUrl="~/admin/SalesPersonList.aspx" runat="server">
+                                <i class="material-icons">attach_money</i>
+                                <p>
+                                    Sales People
+                                </p>
+                            </asp:HyperLink>
+                        </li>
+
+                        <%--Advertisers--%>
+                        <li id="menuItemAdvertisers" runat="server">
+                            <a data-toggle="collapse" href="#advertiserElements">
+                                <i class="material-icons">gradient</i>
+                                <p>
+                                    Advertisers
+                                <b class="caret"></b>
+                                </p>
+                            </a>
+
+                            <div class="collapse" id="advertiserElements">
+                                <ul class="nav">
+                                    <li>
+                                        <asp:HyperLink NavigateUrl="~/admin/AdvertiserList.aspx" runat="server">
+                                            <span class="sidebar-mini">AL </span>
+                                            <span class="sidebar-normal">Advertisers List</span>
+                                        </asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink NavigateUrl="~/admin/AdvertiserEdit.aspx" runat="server">
+                                            <span class="sidebar-mini">SC </span>
+                                            <span class="sidebar-normal">Create Advertiser</span>
+                                        </asp:HyperLink>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <%--Deal of the week--%>
+                        <li id="menuItemDealOfTheWeek" runat="server" visible="false">
+                            <asp:HyperLink NavigateUrl="~/admin/DealOfTheWeek.aspx" runat="server">
+                                <i class="material-icons">timer</i>
+                                <p>
+                                    Deal Of The Week
+                                </p>
+                            </asp:HyperLink>
+                        </li>
+
+                        <%--Specials Edit--%>
+                        <li id="menuItemSpecials" runat="server" visible="false">
+                            <asp:HyperLink NavigateUrl="~/admin/SpecialEdit.aspx" runat="server">
+                                <i class="material-icons">timer</i>
+                                <p>
+                                    Specials
+                                </p>
+                            </asp:HyperLink>
+                        </li>
+
+
+                        <%--Orders--%>
+                        <li id="menuItemOrders" runat="server">
+                            <asp:HyperLink NavigateUrl="~/admin/OrderList.aspx" runat="server">
+                                <i class="material-icons">description</i>
+                                <p>
+                                    Orders
+                                </p>
+                            </asp:HyperLink>
+                        </li>
+
+                        <%--Reports--%>
+                        <li id="menuItemReports" runat="server">
+                            <asp:HyperLink NavigateUrl="~/admin/reports/Default.aspx" runat="server">
+                                <i class="material-icons">developer_board</i>
+                                <p>
+                                    Reports
+                                </p>
+                            </asp:HyperLink>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="main-panel">
+                <nav class="navbar navbar-transparent navbar-absolute">
+                    <div class="container-fluid">
+                        <div class="navbar-minimize">
+                            <button id="minimizeSidebar" class="btn btn-round btn-white btn-fill btn-just-icon">
+                                <i class="material-icons visible-on-sidebar-regular">more_vert</i>
+                                <i class="material-icons visible-on-sidebar-mini">view_list</i>
+                            </button>
+                        </div>
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            &nbsp;&nbsp;
+                            <a class="navbar-brand" href="#">
+                                <asp:Label ID="stationHeaderLabel" runat="server" />
+                                Dashboard </a>
+                        </div>
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+
+                                <asp:PlaceHolder ID="superAdminHolder" runat="server">
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink1" NavigateUrl="~/admin/super/Default.aspx" Text="Return to Super Admin" runat="server">
+                                        <i class="material-icons">dashboard</i>
+                                        <p class="hidden-lg hidden-md">Dashboard</p>
+                                        </asp:HyperLink>
+                                    </li>
+                                </asp:PlaceHolder>
+
+                                <li>
+                                    <asp:HyperLink ID="consumerLink" Text="Consumer Site" Target="_blank" runat="server" />
+                                </li>
+
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="material-icons">notifications</i>
+                                        <span class="notification">3</span>
+                                        <p class="hidden-lg hidden-md">
+                                            Notifications
+                                        <b class="caret"></b>
+                                        </p>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#">You have 5 new tasks</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Another Notification</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Another One</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="separator hidden-lg hidden-md"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="content">
+                    <div class="container-fluid">
+
+                        <asp:PlaceHolder ID="messageHolder" runat="server">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="alert alert-info alert-auto-close alert-dismissible" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="material-icons">close</i></span></button>
+                                        <asp:Label ID="messageLabel" runat="server" data-notify="message" />
+                                    </div>
+                                </div>
+                            </div>
+                        </asp:PlaceHolder>
+
+                        <asp:PlaceHolder ID="errorMessageHolder" runat="server">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="alert alert-danger alert-auto-close alert-dismissible" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="material-icons">close</i></span></button>
+                                        <asp:Label ID="errorMessageLabel" runat="server" />
+                                    </div>
+                                </div>
+                            </div>
+                        </asp:PlaceHolder>
+
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <p class="copyright pull-right">
+                            &copy; DollarSaver 2006 -
+                            <asp:Label ID="endYearLabel" runat="server" />
+                            | Designed By:
+                            <a href="http://www.trigwebdesign.com" target="_blank">Trig Web Design </a>
+                        </p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+    </form>
+
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="<%=ResolveUrl("~/admin/assets/js/material.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/admin/assets/js/perfect-scrollbar.jquery.min.js") %>"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/admin/assets/js/arrive.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/admin/assets/js/jquery-validation/jquery.validate.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/admin/assets/js/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/admin/assets/js/moment.min.js") %>"></script>
+    <%--<script type="text/javascript" src="<%=ResolveUrl("~/admin/assets/js/chartist.min.js") %>"></script>--%>
+    <script type="text/javascript" src="<%=ResolveUrl("~/admin/assets/js/jquery.bootstrap-wizard.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/admin/assets/js/bootstrap-notify.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/admin/assets/js/bootstrap-datetimepicker.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/admin/assets/js/jquery-jvectormap.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/admin/assets/js/nouislider.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/admin/assets/js/jquery.select-bootstrap.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/admin/assets/js/jquery.datatables.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/admin/assets/js/sweetalert2.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/admin/assets/js/jasny-bootstrap.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/admin/assets/js/fullcalendar.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/admin/assets/js/jquery.tagsinput.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/admin/assets/js/material-dashboard.js?v=1.2.1") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/admin/assets/js/admin.js") %>"></script>
+
+    <script> dollarSaver.alertTimeout(); </script>
+
+    <asp:ContentPlaceHolder ID="ScriptsPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>

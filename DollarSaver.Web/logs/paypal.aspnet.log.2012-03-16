@@ -1,0 +1,63 @@
+﻿16 Mar 2012 14:40:41 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapi', environment: 'live', port: 'PayPalAPI'
+16 Mar 2012 14:40:41 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapiaa', environment: 'live', port: 'PayPalAPIAA'
+16 Mar 2012 14:40:41 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapi-threeToken', environment: 'live', port: 'PayPalAPI'
+16 Mar 2012 14:40:41 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapiaa-threeToken', environment: 'live', port: 'PayPalAPIAA'
+16 Mar 2012 14:40:41 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapi', environment: 'sandbox', port: 'PayPalAPI'
+16 Mar 2012 14:40:41 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapiaa', environment: 'sandbox', port: 'PayPalAPIAA'
+16 Mar 2012 14:40:41 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapi-threeToken', environment: 'sandbox', port: 'PayPalAPI'
+16 Mar 2012 14:40:41 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapiaa-threeToken', environment: 'sandbox', port: 'PayPalAPIAA'
+16 Mar 2012 14:40:41 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapi', environment: 'beta-sandbox', port: 'PayPalAPI'
+16 Mar 2012 14:40:41 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapiaa', environment: 'beta-sandbox', port: 'PayPalAPIAA'
+16 Mar 2012 14:40:41 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapi-threeToken', environment: 'beta-sandbox', port: 'PayPalAPI'
+16 Mar 2012 14:40:41 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapiaa-threeToken', environment: 'beta-sandbox', port: 'PayPalAPIAA'
+16 Mar 2012 14:40:41 DEBUG [Config] Current assembly version: paypal_base, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b37401294aaf5617
+16 Mar 2012 14:40:41 DEBUG [Config] TrustAll :False
+16 Mar 2012 14:40:41 DEBUG [Config] Endpoints loaded :12
+16 Mar 2012 18:43:04 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapi', environment: 'live', port: 'PayPalAPI'
+16 Mar 2012 18:43:05 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapiaa', environment: 'live', port: 'PayPalAPIAA'
+16 Mar 2012 18:43:05 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapi-threeToken', environment: 'live', port: 'PayPalAPI'
+16 Mar 2012 18:43:05 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapiaa-threeToken', environment: 'live', port: 'PayPalAPIAA'
+16 Mar 2012 18:43:05 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapi', environment: 'sandbox', port: 'PayPalAPI'
+16 Mar 2012 18:43:05 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapiaa', environment: 'sandbox', port: 'PayPalAPIAA'
+16 Mar 2012 18:43:05 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapi-threeToken', environment: 'sandbox', port: 'PayPalAPI'
+16 Mar 2012 18:43:05 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapiaa-threeToken', environment: 'sandbox', port: 'PayPalAPIAA'
+16 Mar 2012 18:43:05 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapi', environment: 'beta-sandbox', port: 'PayPalAPI'
+16 Mar 2012 18:43:05 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapiaa', environment: 'beta-sandbox', port: 'PayPalAPIAA'
+16 Mar 2012 18:43:05 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapi-threeToken', environment: 'beta-sandbox', port: 'PayPalAPI'
+16 Mar 2012 18:43:05 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapiaa-threeToken', environment: 'beta-sandbox', port: 'PayPalAPIAA'
+16 Mar 2012 18:43:05 DEBUG [Config] Current assembly version: paypal_base, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b37401294aaf5617
+16 Mar 2012 18:43:05 DEBUG [Config] TrustAll :False
+16 Mar 2012 18:43:05 DEBUG [Config] Endpoints loaded :12
+16 Mar 2012 18:43:05 INFO  [NVPAPICaller] VERSION=50.0%2c3.0&METHOD=DoDirectPayment&PAYMENTACTION=Sale&AMT=175.00&CREDITCARDTYPE=Visa&ACCT=****************&EXPDATE=012013&CVV2=***&FIRSTNAME=John&LASTNAME=Doe&STREET=test&CITY=test&STATE=VI&ZIP=test&COUNTRYCODE=US&CURRENCYCODE=USD&USER=matthe_1196197227_biz_api1.gmail.com&PWD=**********&SIGNATURE=********************************************************&SOURCE=PayPalDotNETNVP511 sent
+16 Mar 2012 18:43:26 FATAL [FatalException] Unable to connect to the remote server
+Exception: com.paypal.sdk.exceptions.FatalException
+Message: Unable to connect to the remote server
+
+16 Mar 2012 18:46:38 INFO  [NVPAPICaller] VERSION=50.0%2c3.0&METHOD=DoDirectPayment&PAYMENTACTION=Sale&AMT=175.00&CREDITCARDTYPE=Visa&ACCT=****************&EXPDATE=012013&CVV2=***&FIRSTNAME=John&LASTNAME=Doe&STREET=test&CITY=test&STATE=VI&ZIP=test&COUNTRYCODE=US&CURRENCYCODE=USD&USER=matthe_1196197227_biz_api1.gmail.com&PWD=**********&SIGNATURE=********************************************************&SOURCE=PayPalDotNETNVP511 sent
+16 Mar 2012 18:47:23 INFO  [NVPAPICaller] Result : Elapsed Time : 375 msTIMESTAMP=2012%2d03%2d16T23%3a47%3a23Z&CORRELATIONID=9f000833a8932&ACK=Success&VERSION=3%2e0&BUILD=2649250&AMT=175%2e00&CURRENCYCODE=USD&AVSCODE=X&CVV2MATCH=S&TRANSACTIONID=6H036478CA6939219
+16 Mar 2012 18:52:41 INFO  [NVPAPICaller] VERSION=50.0%2c3.0&METHOD=DoDirectPayment&PAYMENTACTION=Sale&AMT=110.00&CREDITCARDTYPE=Visa&ACCT=****************&EXPDATE=012013&CVV2=***&FIRSTNAME=John&LASTNAME=Doe&STREET=test&CITY=test&STATE=VI&ZIP=test&COUNTRYCODE=US&CURRENCYCODE=USD&USER=matthe_1196197227_biz_api1.gmail.com&PWD=**********&SIGNATURE=********************************************************&SOURCE=PayPalDotNETNVP511 sent
+16 Mar 2012 18:53:21 INFO  [NVPAPICaller] Result : Elapsed Time : 218 msTIMESTAMP=2012%2d03%2d16T23%3a53%3a21Z&CORRELATIONID=76b5bcf27296a&ACK=Success&VERSION=3%2e0&BUILD=2649250&AMT=110%2e00&CURRENCYCODE=USD&AVSCODE=X&CVV2MATCH=S&TRANSACTIONID=0W517120F92111246
+16 Mar 2012 19:21:10 INFO  [NVPAPICaller] VERSION=50.0%2c3.0&METHOD=DoDirectPayment&PAYMENTACTION=Sale&AMT=110.00&CREDITCARDTYPE=Visa&ACCT=****************&EXPDATE=012013&CVV2=***&FIRSTNAME=John&LASTNAME=Doe&STREET=test&CITY=test&STATE=VI&ZIP=test&COUNTRYCODE=US&CURRENCYCODE=USD&USER=matthe_1196197227_biz_api1.gmail.com&PWD=**********&SIGNATURE=********************************************************&SOURCE=PayPalDotNETNVP511 sent
+16 Mar 2012 19:21:25 FATAL [FatalException] The remote name could not be resolved: 'api-3t.sandbox.paypal.com'
+Exception: com.paypal.sdk.exceptions.FatalException
+Message: The remote name could not be resolved: 'api-3t.sandbox.paypal.com'
+
+16 Mar 2012 19:22:13 INFO  [NVPAPICaller] VERSION=50.0%2c3.0&METHOD=DoDirectPayment&PAYMENTACTION=Sale&AMT=110.00&CREDITCARDTYPE=Visa&ACCT=****************&EXPDATE=012013&CVV2=***&FIRSTNAME=John&LASTNAME=Doe&STREET=test&CITY=test&STATE=VI&ZIP=test&COUNTRYCODE=US&CURRENCYCODE=USD&USER=matthe_1196197227_biz_api1.gmail.com&PWD=**********&SIGNATURE=********************************************************&SOURCE=PayPalDotNETNVP511 sent
+16 Mar 2012 19:22:52 INFO  [NVPAPICaller] Result : Elapsed Time : 843 msTIMESTAMP=2012%2d03%2d17T00%3a22%3a52Z&CORRELATIONID=c25cab7fcf072&ACK=Success&VERSION=3%2e0&BUILD=2649250&AMT=110%2e00&CURRENCYCODE=USD&AVSCODE=X&CVV2MATCH=S&TRANSACTIONID=4J599332M13277517
+16 Mar 2012 19:33:13 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapi', environment: 'live', port: 'PayPalAPI'
+16 Mar 2012 19:33:13 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapiaa', environment: 'live', port: 'PayPalAPIAA'
+16 Mar 2012 19:33:13 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapi-threeToken', environment: 'live', port: 'PayPalAPI'
+16 Mar 2012 19:33:13 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapiaa-threeToken', environment: 'live', port: 'PayPalAPIAA'
+16 Mar 2012 19:33:13 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapi', environment: 'sandbox', port: 'PayPalAPI'
+16 Mar 2012 19:33:13 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapiaa', environment: 'sandbox', port: 'PayPalAPIAA'
+16 Mar 2012 19:33:13 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapi-threeToken', environment: 'sandbox', port: 'PayPalAPI'
+16 Mar 2012 19:33:13 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapiaa-threeToken', environment: 'sandbox', port: 'PayPalAPIAA'
+16 Mar 2012 19:33:13 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapi', environment: 'beta-sandbox', port: 'PayPalAPI'
+16 Mar 2012 19:33:13 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapiaa', environment: 'beta-sandbox', port: 'PayPalAPIAA'
+16 Mar 2012 19:33:13 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapi-threeToken', environment: 'beta-sandbox', port: 'PayPalAPI'
+16 Mar 2012 19:33:13 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapiaa-threeToken', environment: 'beta-sandbox', port: 'PayPalAPIAA'
+16 Mar 2012 19:33:13 DEBUG [Config] Current assembly version: paypal_base, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b37401294aaf5617
+16 Mar 2012 19:33:13 DEBUG [Config] TrustAll :False
+16 Mar 2012 19:33:13 DEBUG [Config] Endpoints loaded :12
+16 Mar 2012 19:33:13 INFO  [NVPAPICaller] VERSION=50.0%2c3.0&METHOD=DoDirectPayment&PAYMENTACTION=Sale&AMT=145.00&CREDITCARDTYPE=Visa&ACCT=****************&EXPDATE=012014&CVV2=***&FIRSTNAME=John&LASTNAME=Doe&STREET=test&CITY=test&STATE=VI&ZIP=test&COUNTRYCODE=US&CURRENCYCODE=USD&USER=matthe_1196197227_biz_api1.gmail.com&PWD=**********&SIGNATURE=********************************************************&SOURCE=PayPalDotNETNVP511 sent
+16 Mar 2012 19:33:59 INFO  [NVPAPICaller] Result : Elapsed Time : 718 msTIMESTAMP=2012%2d03%2d17T00%3a33%3a59Z&CORRELATIONID=2466fbcc1aaf1&ACK=Success&VERSION=3%2e0&BUILD=2649250&AMT=145%2e00&CURRENCYCODE=USD&AVSCODE=X&CVV2MATCH=S&TRANSACTIONID=641342576L988725C

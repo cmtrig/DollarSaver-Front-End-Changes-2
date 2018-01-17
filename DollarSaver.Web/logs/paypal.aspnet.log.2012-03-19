@@ -1,0 +1,28 @@
+﻿19 Mar 2012 10:22:35 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapi', environment: 'live', port: 'PayPalAPI'
+19 Mar 2012 10:22:35 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapiaa', environment: 'live', port: 'PayPalAPIAA'
+19 Mar 2012 10:22:35 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapi-threeToken', environment: 'live', port: 'PayPalAPI'
+19 Mar 2012 10:22:35 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapiaa-threeToken', environment: 'live', port: 'PayPalAPIAA'
+19 Mar 2012 10:22:35 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapi', environment: 'sandbox', port: 'PayPalAPI'
+19 Mar 2012 10:22:35 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapiaa', environment: 'sandbox', port: 'PayPalAPIAA'
+19 Mar 2012 10:22:35 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapi-threeToken', environment: 'sandbox', port: 'PayPalAPI'
+19 Mar 2012 10:22:35 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapiaa-threeToken', environment: 'sandbox', port: 'PayPalAPIAA'
+19 Mar 2012 10:22:35 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapi', environment: 'beta-sandbox', port: 'PayPalAPI'
+19 Mar 2012 10:22:35 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapiaa', environment: 'beta-sandbox', port: 'PayPalAPIAA'
+19 Mar 2012 10:22:35 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapi-threeToken', environment: 'beta-sandbox', port: 'PayPalAPI'
+19 Mar 2012 10:22:35 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapiaa-threeToken', environment: 'beta-sandbox', port: 'PayPalAPIAA'
+19 Mar 2012 10:22:35 DEBUG [Config] Current assembly version: paypal_base, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b37401294aaf5617
+19 Mar 2012 10:22:35 DEBUG [Config] TrustAll :False
+19 Mar 2012 10:22:35 DEBUG [Config] Endpoints loaded :12
+19 Mar 2012 10:22:35 INFO  [NVPAPICaller] METHOD=SetExpressCheckout&RETURNURL=http%3a%2f%2flocalhost%3a3712%2fProcessOrder.aspx&CANCELURL=http%3a%2f%2flocalhost%3a3712%2fCart.aspx&AMT=75.00&PAYMENTACTION=Sale&CURRENCYCODE=USD&INVNUM=40882&NOSHIPPING=1&EMAIL=matthewherro%40gmail.com&HDRIMG=https%3a%2f%2fdollarsavershow.com%2fimages%2fds_banner.gif&HDRBORDERCOLOR=404040&PAYFLOWCOLOR=C0E0A0&USER=matthe_1196197227_biz_api1.gmail.com&PWD=**********&SIGNATURE=********************************************************&VERSION=3.0&SOURCE=PayPalDotNETNVP511 sent
+19 Mar 2012 10:22:37 FATAL [FatalException] Unable to connect to the remote server
+Exception: com.paypal.sdk.exceptions.FatalException
+Message: Unable to connect to the remote server
+
+19 Mar 2012 10:24:09 INFO  [NVPAPICaller] METHOD=SetExpressCheckout&RETURNURL=http%3a%2f%2flocalhost%3a3712%2fProcessOrder.aspx&CANCELURL=http%3a%2f%2flocalhost%3a3712%2fCart.aspx&AMT=75.00&PAYMENTACTION=Sale&CURRENCYCODE=USD&INVNUM=40882&NOSHIPPING=1&EMAIL=matthewherro%40gmail.com&HDRIMG=https%3a%2f%2fdollarsavershow.com%2fimages%2fds_banner.gif&HDRBORDERCOLOR=404040&PAYFLOWCOLOR=C0E0A0&USER=matthe_1196197227_biz_api1.gmail.com&PWD=**********&SIGNATURE=********************************************************&VERSION=3.0&SOURCE=PayPalDotNETNVP511 sent
+19 Mar 2012 10:24:11 INFO  [NVPAPICaller] Result : Elapsed Time : 531 msTOKEN=EC%2d8G76583754919102P&TIMESTAMP=2012%2d03%2d19T15%3a24%3a10Z&CORRELATIONID=53948c2b56e4b&ACK=Success&VERSION=3%2e0&BUILD=2649250
+19 Mar 2012 10:30:13 INFO  [NVPAPICaller] METHOD=SetExpressCheckout&RETURNURL=http%3a%2f%2flocalhost%3a3712%2fProcessOrder.aspx&CANCELURL=http%3a%2f%2flocalhost%3a3712%2fCart.aspx&AMT=75.00&PAYMENTACTION=Sale&CURRENCYCODE=USD&INVNUM=40882&NOSHIPPING=1&EMAIL=matthewherro%40gmail.com&HDRIMG=https%3a%2f%2fdollarsavershow.com%2fimages%2fds_banner.gif&HDRBORDERCOLOR=404040&PAYFLOWCOLOR=C0E0A0&USER=matthe_1196197227_biz_api1.gmail.com&PWD=**********&SIGNATURE=********************************************************&VERSION=3.0&SOURCE=PayPalDotNETNVP511 sent
+19 Mar 2012 10:30:15 INFO  [NVPAPICaller] Result : Elapsed Time : 906 msTOKEN=EC%2d5P0279450U544054N&TIMESTAMP=2012%2d03%2d19T15%3a30%3a14Z&CORRELATIONID=efab20b81282c&ACK=Success&VERSION=3%2e0&BUILD=2649250
+19 Mar 2012 10:30:45 INFO  [NVPAPICaller] METHOD=GetExpressCheckoutDetails&TOKEN=EC-5P0279450U544054N&USER=matthe_1196197227_biz_api1.gmail.com&PWD=**********&SIGNATURE=********************************************************&VERSION=3.0&SOURCE=PayPalDotNETNVP511 sent
+19 Mar 2012 10:30:46 INFO  [NVPAPICaller] Result : Elapsed Time : 171 msTOKEN=EC%2d5P0279450U544054N&TIMESTAMP=2012%2d03%2d19T15%3a30%3a46Z&CORRELATIONID=8a09b373ed248&ACK=Success&VERSION=3%2e0&BUILD=2649250&EMAIL=asdf_1196284509_per%40gmail%2ecom&PAYERID=WCGVFPP5V34B8&PAYERSTATUS=verified&FIRSTNAME=Test&LASTNAME=User&COUNTRYCODE=US&INVNUM=40882
+19 Mar 2012 10:30:46 INFO  [NVPAPICaller] METHOD=DoExpressCheckoutPayment&TOKEN=EC-5P0279450U544054N&PAYERID=WCGVFPP5V34B8&AMT=75.00&PAYMENTACTION=Sale&CURRENCYCODE=USD&INVNUM=40882&ITEMAMT=75.00&L_NAME0=%24100+Certificate&L_NUMBER0=29&L_QTY0=1&L_AMT0=50.00&L_NAME1=Bob&L_NUMBER1=36&L_QTY1=1&L_AMT1=25.00&USER=matthe_1196197227_biz_api1.gmail.com&PWD=**********&SIGNATURE=********************************************************&VERSION=3.0&SOURCE=PayPalDotNETNVP511 sent
+19 Mar 2012 10:30:52 INFO  [NVPAPICaller] Result : Elapsed Time : 968 msTOKEN=EC%2d5P0279450U544054N&TIMESTAMP=2012%2d03%2d19T15%3a30%3a52Z&CORRELATIONID=16cf790225ae1&ACK=Success&VERSION=3%2e0&BUILD=2649250&TRANSACTIONID=1MN599352A072200J&TRANSACTIONTYPE=cart&PAYMENTTYPE=instant&ORDERTIME=2012%2d03%2d19T15%3a30%3a49Z&AMT=75%2e00&FEEAMT=2%2e48&TAXAMT=0%2e00&CURRENCYCODE=USD&PAYMENTSTATUS=Completed&PENDINGREASON=None&REASONCODE=None

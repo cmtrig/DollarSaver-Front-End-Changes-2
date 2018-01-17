@@ -1,0 +1,152 @@
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="DollarSaver.Web.Admin.Super.super" Codebehind="super.master.cs" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>DollarSaver</title>
+    <link id="Link1" rel="stylesheet" href="~/admin/styles/admin.css" type="text/css" runat="server" />
+    <link id="Link2" rel="stylesheet" href="~/admin/styles/calendar.css" type="text/css" runat="server" />
+    <script language="javascript" type="text/javascript" src="/admin/js/calendar.js"></script>
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+    <meta http-equiv="EXPIRES" content="Mon, 22 Jul 2002 11:12:01 GMT" />
+</head>
+<body runat="server" style="background-color: #C0E0E0;" id="bodyTag">
+<form id="form1" runat="server">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td align="center">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        <table cellpadding="0" cellspacing="0" border="0" width="1000" style="border-left: solid 1px #808080; border-right: solid 1px #808080; border-bottom: solid 1px #808080; background-color: #FEFEFA;">
+                            <tr>
+                                <td align="center">
+                                    <table cellpadding="7" cellspacing="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="padding: 5px;" align="left">
+                                                <asp:Image ImageUrl="~/admin/images/ds_logo_header.gif" runat="server" />
+                                            </td>
+                                            <td align="left" style="font-size: 16pt;">
+                                                Super Admin
+                                            </td>
+                                            <td align="right">
+                                                <table cellpadding="3" cellspacing="0" border="0">
+                                                    <tr>
+                                                        <td align="right">
+                                                            Logged in as: <asp:Label ID="userIdLabel" runat="server" Style="font-weight: bold;" />
+                                                            <asp:HyperLink ID="logoutLink" NavigateUrl="~/admin/Login.aspx?logout=Y" Text="Logout" runat="server" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="font-size: 10pt;" align="right">
+                                                            <asp:HyperLink ID="HyperLink1" NavigateUrl="http://mail.google.com/a/dollarsavershow.com" Target="_blank" Text="DollarSaver Webmail" runat="server" />
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #E0F8A0; border-bottom: solid 1px #808080; border-top: solid 1px #808080; padding: 8px;" align="center" >
+                                          
+                                    <asp:ScriptManager EnablePartialRendering="true" ID="ScriptManager1" runat="server"></asp:ScriptManager>    
+                                                               
+<script type="text/javascript" language="javascript">
+
+Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler);
+
+function EndRequestHandler(sender, args)
+{
+   if (args.get_error() != undefined)
+   {
+        /*
+       var errorMessage;
+       if (args.get_response().get_statusCode() == '200')
+       {
+           errorMessage = args.get_error().message;
+       }
+       else
+       {
+           // Error occurred somewhere other than the server page.
+           errorMessage = 'An unspecified error occurred. ';
+       }*/
+       //alert("Errorb!");
+       args.set_errorHandled(true);
+   } else {
+        //alert("OK!")
+   }
+}
+</script>
+            
+                                    <asp:Timer ID="mainTimer" runat="server" Interval="10000">
+                                    </asp:Timer>
+
+                                    <asp:UpdatePanel ID="mainPanel" UpdateMode="Conditional" runat="server">
+                                    <Triggers>
+                                    <asp:AsyncPostBackTrigger ControlID="mainTimer" EventName="Tick" />
+                                    </Triggers>
+                                    <ContentTemplate>  
+                                    
+                                        <asp:HyperLink ID="homeLink" NavigateUrl="~/admin/super/Default.aspx" Text="Home" CssClass="menu" runat="server" />
+                                        <asp:HyperLink ID="userLink" NavigateUrl="~/admin/super/user/UserList.aspx" Text="Users" CssClass="menu" runat="server" />
+                                        <asp:HyperLink ID="orderLink" NavigateUrl="~/admin/super/order/OrderList.aspx" Text="Orders" CssClass="menu" runat="server" />
+                                        <asp:HyperLink ID="issueLink" NavigateUrl="~/admin/super/issue/IssueList.aspx" Text="Issues" CssClass="menu" runat="server" />
+                                        <asp:HyperLink ID="reportsLink" NavigateUrl="~/admin/super/reports/Default.aspx" Text="Reports" CssClass="menu" runat="server" />
+                                    </ContentTemplate>
+                                    </asp:UpdatePanel>
+                                </td>
+                            
+                            </tr>
+                            <asp:PlaceHolder ID="messageHolder" runat="server">
+                            <tr>
+                                <td style="padding: 15px 10px 0px 10px" align="center">
+                                    <table width="60%" cellpadding="5" cellspacing="0" class="message">
+                                        <tr>
+                                            <td align="center"><asp:Label ID="messageLabel" runat="server" /></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            </asp:PlaceHolder>
+                            <asp:PlaceHolder ID="errorMessageHolder" runat="server">
+                            <tr>
+                                <td style="padding: 15px 10px 0px 10px" align="center">
+                                    <table width="60%" cellpadding="5" cellspacing="0" class="error_message">
+                                        <tr>
+                                            <td align="center"><asp:Label ID="errorMessageLabel" runat="server" /></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            </asp:PlaceHolder>
+                            <tr>
+                                <td align="center" style="padding: 15px;">
+                                    <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                                    </asp:contentplaceholder>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                            
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 5px;" class="small_text" align="right">
+                        &copy; DollarSaver 2006 - <asp:Label ID="endYearLabel" runat="server" />
+                    </td>
+                </tr>
+                
+            </table>    
+        </td>
+    </tr>
+            
+</table>
+</form>
+</body>
+</html>

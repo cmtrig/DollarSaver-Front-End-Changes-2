@@ -1,0 +1,83 @@
+
+td {
+	color: #404040;
+}
+
+.currency {
+    color: #669966;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    
+}
+.certinfo {
+    color: #404040;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    
+}
+.certsmall {
+    color: #404040;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    
+}
+.certnumber {
+    color: #669966;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    
+}
+    
+.certheadline {
+    color: #404040;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    
+}
+
+.certitalic {
+    color: #404040;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    
+}
+.certplain {
+    color: #404040;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    
+}
+.certupper {
+    color: #404040;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    
+}
+
+.green {
+    color: #669900;
+}
+
+.red {
+    color: #FF0000;
+}
+
+a:link, a:visited
+{
+    color: #4040F0;
+    font-family: Verdana, Sans-Serif;
+    text-decoration: underline;
+}
+
+a:hover, a:active 
+{
+    color: #7070FF;
+    font-family: Verdana, Sans-Serif;
+    text-decoration: underline;
+}
+
+@media print {
+  	.noprint { display: none; }
+}

@@ -1,0 +1,45 @@
+body 
+{
+    margin: 0px;
+    /*background-color: #C0E0A0;*/
+    background-color: #BED4F4;
+	background-image: url(/images/BKG_fade.gif);
+	background-repeat: repeat-x;
+}
+td 
+{
+    color: #404040;
+    font-family: Verdana, Sans-Serif;
+    font-size: 14px;
+}
+
+.nav 
+{
+    background-color: #E0F8A0; 
+    text-align: left;
+}
+
+.station_text 
+{
+     color: #406000;
+}
+
+.dotw_box 
+{
+      border: solid 10px #F4FCE0;
+}
+
+.dotw_bg
+{
+      background-color: #F4FCE0;
+}
+
+table.nav_menu td 
+{
+    font-size: 9pt;
+}
+
+table.nav_menu
+{
+    font-size: 9pt;
+}

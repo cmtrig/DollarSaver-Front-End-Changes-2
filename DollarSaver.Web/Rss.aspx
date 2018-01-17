@@ -1,0 +1,1 @@
+<%@ Page Language="C#" AutoEventWireup="true" Inherits="DollarSaver.Web.Rss" Codebehind="Rss.aspx.cs" %>

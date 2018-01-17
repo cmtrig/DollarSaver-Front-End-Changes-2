@@ -1,0 +1,164 @@
+<%@ Master Language="C#" AutoEventWireup="true"  Inherits="DollarSaver.Web.CheckoutMaster" Codebehind="checkout.master.cs" %>
+<%@ Register TagPrefix="DollarSaver" TagName="Name" Src="~/controls/Name.ascx" %>
+<%@ Register TagPrefix="DollarSaver" TagName="NavMenu" Src="~/controls/NavMenu.ascx" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>DollarSaver</title>
+    <meta name="author" content="Trig Web Design" />
+    <meta name="robots" content="index, follow" />
+    <link id="Link2" rel="stylesheet" href="~/styles/theme.css" type="text/css" runat="server" />
+    <link id="Link1" rel="stylesheet" href="~/styles/custom.css" type="text/css" runat="server" />
+    <link id="stationStyleSheet" rel="stylesheet" type="text/css" runat="server" />
+
+    <script type="text/javascript" language="JavaScript">
+    <!--
+
+    if (window != top) top.location.href = location.href;
+
+    // -->
+    </script>
+</head>
+<body id="body" runat="server">
+
+<form id="mainForm" runat="server">
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td align="center">
+      
+            <table cellpadding="0" cellspacing="0" border="0" width="1000" style="background-color: #FEFEFA; border-left: solid 1px #A0A0A0; border-right: solid 1px #A0A0A0;">
+                <tr>
+                    <td align="center">
+                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                            <tr>
+                                <td align="left">
+                                    <table cellpadding="0" cellspacing="0" border="0">
+                                        <tr>
+                                            <td valign="middle" align="left" style="padding: 10px;">
+                                                <asp:Image ID="topperImage" ImageUrl="~/images/ds_logo_header.gif" AlternateText="DollarSaver" runat="server" />
+                                            </td>
+                                            <td valign="middle">
+                                                 <asp:Image ID="localSavingsImage" ImageUrl="~/images/local.gif" AlternateText="DollarSaver" runat="server"  />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="right" nowrap style="padding: 10px;">
+                                    <table cellpadding="3" cellspacing="0" border="0">
+                                        <tr>
+                                            <td style="font-size: 8pt;" align="right" nowrap>
+                                                <asp:PlaceHolder ID="stationUrlHolder" runat="server">
+                                                    <asp:HyperLink ID="stationLink" runat="server" />
+                                                </asp:PlaceHolder>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right" nowrap>
+                                                <asp:HyperLink ID="cartLink" Text="View Cart" NavigateUrl="~/Cart.aspx" Style="font-weight: bold;" runat="server" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0px; border-top: solid 1px #808080;" colspan="2" align="center">
+                                    <asp:HyperLink ID="headerLink" runat="server">
+                                    <asp:Image ID="headerImage" ImageUrl="~/images/header.jpg" BorderWidth="0" runat="server" />
+                                    </asp:HyperLink></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <DollarSaver:NavMenu ID="topMenu" runat="server" />
+                    </td>
+                </tr>
+                <asp:PlaceHolder ID="messageHolder" runat="server">
+                <tr>
+                    <td style="padding: 15px 10px 0px 10px" align="center">
+                        <table width="80%" cellpadding="5" cellspacing="0" class="message">
+                            <tr>
+                                <td align="center"><asp:Label ID="messageLabel" runat="server" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                </asp:PlaceHolder>
+                <asp:PlaceHolder ID="errorMessageHolder" runat="server">
+                <tr>
+                    <td style="padding: 15px 10px 0px 10px" align="center">
+                        <table width="80%" cellpadding="5" cellspacing="0" class="error_message">
+                            <tr>
+                                <td align="center"><asp:Label ID="errorMessageLabel" runat="server" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                </asp:PlaceHolder>
+                <tr>
+                    <td style="padding: 10px;">
+                    
+                        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                        </asp:contentplaceholder>
+                
+                    </td>
+                
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">
+                    
+                        <asp:contentplaceholder id="ContentPlaceHolder2" runat="server">
+                        </asp:contentplaceholder>
+                
+                    </td>
+                
+                </tr>
+                <tr>
+                    
+                    <td align="center">
+                        <table cellpadding="10" cellspacing="0" border="0" width="100%">
+                            <tr>
+                                <td align="center">
+                                    <table width="80%" cellpadding="5" cellspacing="0" class="signup_table">
+                                        <tr>
+                                            <td align="center" style="background-image:url(<%=ResolveUrl("~/images/bottomSignupBG.gif")%>);padding:5px;">
+                                                Be the first to know about new deals - <asp:HyperLink ID="signUpBottomLink" NavigateUrl="~/MailingListSignUp.aspx" Text="Sign Up To Our E-Mail List!" Font-Bold="true" runat="server" /><br />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-size: 10px;" align="center">
+                                    <asp:HyperLink ID="contactLink" NavigateUrl="~/contact" Text="Contact Us" CssClass="small_link" runat="server" /> |
+                                    <asp:HyperLink ID="privacyLink" NavigateUrl="~/Privacy.aspx" Text="Privacy Policy" CssClass="small_link" runat="server" /> |
+                                    <asp:HyperLink ID="termsLink" NavigateUrl="~/Terms.aspx" Text="Terms of Agreement" CssClass="small_link" runat="server" /> |
+                                    <asp:HyperLink ID="faqLink" NavigateUrl="~/FAQ.aspx" Text="F.A.Q." CssClass="small_link" runat="server" />
+                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" align="center" style="font-size: 10px; color: #6A9BE0;">
+                                    &copy; <DollarSaver:Name runat="server" /> 2006 - <asp:Label ID="endYearLabel" runat="server" /> Rights Reserved
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    
+                </tr>
+
+            </table>
+
+        </td>
+    </tr>
+</table>
+
+</form>
+</body>
+</html>

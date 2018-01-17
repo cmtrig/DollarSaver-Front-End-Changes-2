@@ -1,0 +1,17 @@
+﻿18 Jul 2012 10:34:20 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapi', environment: 'live', port: 'PayPalAPI'
+18 Jul 2012 10:34:21 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapiaa', environment: 'live', port: 'PayPalAPIAA'
+18 Jul 2012 10:34:21 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapi-threeToken', environment: 'live', port: 'PayPalAPI'
+18 Jul 2012 10:34:21 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapiaa-threeToken', environment: 'live', port: 'PayPalAPIAA'
+18 Jul 2012 10:34:21 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapi', environment: 'sandbox', port: 'PayPalAPI'
+18 Jul 2012 10:34:21 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapiaa', environment: 'sandbox', port: 'PayPalAPIAA'
+18 Jul 2012 10:34:21 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapi-threeToken', environment: 'sandbox', port: 'PayPalAPI'
+18 Jul 2012 10:34:21 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapiaa-threeToken', environment: 'sandbox', port: 'PayPalAPIAA'
+18 Jul 2012 10:34:21 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapi', environment: 'beta-sandbox', port: 'PayPalAPI'
+18 Jul 2012 10:34:21 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapiaa', environment: 'beta-sandbox', port: 'PayPalAPIAA'
+18 Jul 2012 10:34:21 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapi-threeToken', environment: 'beta-sandbox', port: 'PayPalAPI'
+18 Jul 2012 10:34:21 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapiaa-threeToken', environment: 'beta-sandbox', port: 'PayPalAPIAA'
+18 Jul 2012 10:34:21 DEBUG [Config] Current assembly version: paypal_base, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b37401294aaf5617
+18 Jul 2012 10:34:21 DEBUG [Config] TrustAll :False
+18 Jul 2012 10:34:21 DEBUG [Config] Endpoints loaded :12
+18 Jul 2012 10:34:21 INFO  [NVPAPICaller] METHOD=SetExpressCheckout&RETURNURL=http%3a%2f%2flocalhost%3a3712%2fProcessOrder.aspx&CANCELURL=http%3a%2f%2flocalhost%3a3712%2fCart.aspx&AMT=25.00&PAYMENTACTION=Sale&CURRENCYCODE=USD&INVNUM=40890&NOSHIPPING=1&EMAIL=matthewherro%40gmail.com&HDRIMG=https%3a%2f%2fdollarsavershow.com%2fimages%2fds_banner.gif&HDRBORDERCOLOR=404040&PAYFLOWCOLOR=C0E0A0&USER=matthe_1196197227_biz_api1.gmail.com&PWD=**********&SIGNATURE=********************************************************&VERSION=3.0&SOURCE=PayPalDotNETNVP511 sent
+18 Jul 2012 10:34:22 INFO  [NVPAPICaller] Result : Elapsed Time : 78 msTOKEN=EC%2d46655382G1440902G&TIMESTAMP=2012%2d07%2d18T15%3a34%3a23Z&CORRELATIONID=e9112295b7824&ACK=Success&VERSION=3%2e0&BUILD=3300093
