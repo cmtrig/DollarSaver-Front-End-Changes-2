@@ -3,13 +3,11 @@
 <%@ Register TagPrefix="DollarSaver" TagName="TermsText" Src="~/controls/TermsText.ascx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
       
-<table cellpadding="0" cellspacing="0" border="0" width="100%">
-    <tr>
-        <td align="center">
+<div class="uk-margin-large page-padding">
+               <h1 class="uk-h2">Terms of Agreement</h1>
             <DollarSaver:TermsText ID="termsText" runat="server" />
-        </td>
-    </tr>
-</table>
+        
+</div>
 
 
 

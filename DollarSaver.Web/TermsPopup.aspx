@@ -6,36 +6,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title>Terms of Agreement</title>
-    
-<style type="text/css">
-
-.heading_two
-{
-    font-family: Verdana, Sans-Serif;
-    font-size: 12px;
-    font-weight: bold;
-    color: #404040;
-}
-
-.p_text 
-{
-    font-family: Verdana, Sans-Serif;
-  font-size: 10px; 
-  line-height: 16px;   
-}
-</style>
+<link rel="Stylesheet" type="text/css" href="/styles/theme.css.css" />
+<link rel="Stylesheet" type="text/css" href="/styles/custom.css" />
+<link rel="Stylesheet" type="text/css" href="/styles/station.css" />
 
 </head>
 <body>
     <form id="form1" runat="server">
 
-        <table cellpadding="0" cellspacing="0" border="0" width="100%">
-            <tr>
-                <td align="center">
-                    <DollarSaver:TermsText ID="termsText" runat="server" />
-                </td>
-            </tr>
-        </table>
+        <div class="uk-margin-large page-padding">
+               <h1 class="uk-h2">Terms of Agreement</h1>
+            <DollarSaver:TermsText ID="termsText" runat="server" />
+        
+        </div>
 
 
     </form>

@@ -5,12 +5,14 @@
 <asp:PlaceHolder ID="advertiserHolder" runat="server">
 
 <div class="uk-panel uk-align-center">
-   <table cellpadding="5" cellspacing="0" border="0">
-    <tr>
-    <td valign="top" align="center" width="135">
-     <asp:Image ID="advertiserImage" BorderWidth="1" BorderColor="#404040" runat="server" />
-    </td>
-     <td valign="top" align="left" style="padding: 2px;">
+   <div class="uk-grid uk-grid-medium">
+    <div class="uk-width-medium-2-10 uk-align-center">
+     <div style=" text-align: center; padding-bottom: 5px;">
+    <asp:Image ID="advertiserImage" BorderWidth="1" BorderColor="#404040" runat="server" />
+     </div>
+    </div>
+
+  <div class="uk-width-medium-8-10 uk-align-center">
      
 	<table cellpadding="3" cellspacing="0" border="0">
                                         <tr>
@@ -31,16 +33,11 @@
                                             </td>
                                         </tr>
                                     </table>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="left" colspan="2">
-                                
-                                    <div id="map" style="width: 750px; height: 450px; border: solid 1px #404040;"></div>
-                                
-                                </td>
-                            </tr>
-                        </table>
+   </div>
+    <div class="uk-panel uk-align-center">
+         <div id="map" style="max-width: 750px; height: 450px; border: solid 1px #404040;"></div>
+    </div>
+  </div>   
                     
 </div>
 

@@ -2,25 +2,21 @@
 <%@ Register TagPrefix="DollarSaver" TagName="Name" Src="~/controls/Name.ascx" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml" >
-
 <head runat="server">
 	<title>Print Certificate</title>
     <link rel="stylesheet" href="~/styles/certificate.css" type="text/css" runat="server" />
+    <link rel="stylesheet" href="~/styles/theme.css" type="text/css" runat="server" />
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-	
-
 </head> 
-
 <body>
-  
-      
+   <div class="uk-visible-small uk-text-center uk-text-warning">
+       This page best viewed in Landscape Mode
+
+   </div>   
 <table cellpadding="10" cellspacing="0" border="0" style="background-color: #FFFFFF;" width="100%">
     <tr>
         <td align="center">
-       
-        
         <asp:PlaceHolder ID="certificateHolder" runat="server">
             <table cellpadding="0" cellspacing="0" border="0">
                 <tr>
@@ -46,8 +42,6 @@
                         <table cellpadding="0" cellspacing="0" border="0">
                             <tr>
                                 <td>
-                                
-                                            
                                     <table cellpadding="10" cellspacing="0" border="0" width="650" style="border: solid 5px #707070;">
                                     <tr>
                                         <td width="35%" align="center">
@@ -93,7 +87,7 @@
                                             <B>THIS CERTIFICATE IS GOOD FOR:</B><br />
 
                                             <asp:Label ID="certificateDescriptionLabel" runat="server" /><br />
-                                            <B>Purchase Date:</B>  <asp:Label ID="purchaseDateLabel" runat="server" />
+                                            <b>Purchase Date:</b>  <asp:Label ID="purchaseDateLabel" runat="server" />
                                         </td>
                                     </tr>
 
@@ -104,9 +98,6 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                        
-                                            
-                                            
                                     <table cellpadding="3" cellspacing="0" width="650">
                                     
 	                                    <tr>
@@ -159,7 +150,7 @@
                     
                         </div>
                         
-                        <div style="width: 650px;"></div>
+                        <div style="max-width: 650px;"></div>
                         <asp:PlaceHolder ID="voidHolder" Visible="false" runat="server">
                         <div style="z-index:0">
                             <asp:Image ImageUrl="~/images/void.gif" AlternateText="Void" runat="server" />
