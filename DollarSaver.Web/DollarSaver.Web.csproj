@@ -192,6 +192,8 @@
     <Content Include="admin\CategoryCreate.aspx" />
     <Content Include="admin\super\reports\Default.aspx" />
     <Content Include="admin\super\reports\RunReport.aspx" />
+    <Content Include="images\cart2.png" />
+    <Content Include="images\mobile-landscape_orientation-128.png" />
     <Content Include="Rss.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="styles\custom.css" />

@@ -8,12 +8,18 @@
     <link rel="stylesheet" href="~/styles/certificate.css" type="text/css" runat="server" />
     <link rel="stylesheet" href="~/styles/theme.css" type="text/css" runat="server" />
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 74px;
+            height: 75px;
+        }
+    </style>
 </head> 
 <body>
    <div class="uk-visible-small uk-text-center uk-text-warning">
-       This page best viewed in Landscape Mode
+       This page best viewed in Landscape Mode 
 
-   </div>   
+   <img alt="Best viewed in Landscape mode" class="auto-style1" src="images/mobile-landscape_orientation-128.png" /></div>   
 <table cellpadding="10" cellspacing="0" border="0" style="background-color: #FFFFFF;" width="100%">
     <tr>
         <td align="center">
