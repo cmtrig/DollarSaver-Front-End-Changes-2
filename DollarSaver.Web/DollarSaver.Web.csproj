@@ -197,6 +197,7 @@
     <Content Include="Rss.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="styles\custom.css" />
+    <Content Include="styles\style.css" />
     <Content Include="styles\theme.css" />
     <Content Include="TestSoldOut.aspx" />
     <Content Include="Web.config">

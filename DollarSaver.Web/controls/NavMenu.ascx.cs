@@ -20,7 +20,7 @@ namespace DollarSaver.Web.controls {
 
 
             StationPageBase parent = (StationPageBase)Page;
-
+            
             MenuItem homeItem = new MenuItem("Home", "0", null, parent.GetUrl("~/Default.aspx"));
             navMenu.Items.Add(homeItem);
 

@@ -11,6 +11,7 @@
     <meta name="robots" content="index, follow" />
     <link id="Link2" rel="stylesheet" href="~/styles/theme.css" type="text/css" runat="server" />
     <link id="Link1" rel="stylesheet" href="~/styles/custom.css" type="text/css" runat="server" />
+    <link id="Link3" rel="stylesheet" href="~/styles/style.css" type="text/css" runat="server" />
     <link id="stationStyleSheet" rel="stylesheet" type="text/css" runat="server" />
      
     <script type="text/javascript" language="JavaScript">
@@ -25,6 +26,34 @@
             height: 27px;
         }
     </style>
+    <script type="text/javascript">  
+        $(document).ready(function () {
+            $.ajax({
+                url: 'MenuHandler.ashx',
+                method: 'get',
+                dataType: 'json',
+                success: function (data) {
+                    buildMenu($('#menu'), data);
+                    $('#menu').menu();
+                }
+            });
+
+            function buildMenu(parent, items) {
+                $.each(items, function () {
+                    var li = $('<li>' + this.Text + '</li>');
+                    if (!this.isActive) {
+                        li.addClass("ui-state-disabled");
+                    }
+                    li.appendTo(parent);
+                    if (this.List && this.List.length > 0) {
+                        var ul = $('<ul></ul>');
+                        ul.appendTo(li);
+                        buildMenu(ul, this.List);
+                    }
+                });
+            }
+        });
+    </script>
 </head>
 <body id="body" runat="server">
     
@@ -78,16 +107,25 @@
                  <asp:HyperLink ID="headerLink" runat="server">
                                     <asp:Image ID="headerImage" ImageUrl="~/images/header.jpg" BorderWidth="0" runat="server" />
                                     </asp:HyperLink></div> 
-                <nav class="tm-navbar-container">
+               <nav class="tm-navbar-container">
                    <div class="tm-nav uk-hidden-small">
-                       <DollarSaver:NavMenu ID="NavMenu" runat="server" /> 
+                      <ul id="css3menu1" class="topmenu">
+	<li class="topfirst"><a href="#" style="height:19px;line-height:19px;">Home</a></li>
+	<li class="topmenu"><a href="#" style="height:19px;line-height:19px;"><span>Item 1</span></a>
+	<ul>
+		<li><a href="#">Item 1 0</a></li>
+		<li><a href="#">Item 1 1</a></li>
+		<li><a href="#">Item 1 2</a></li>
+	</ul></li>
+	<li class="toplast"><a href="#" style="height:19px;line-height:19px;">Item 2</a></li>
+</ul> <DollarSaver:NavMenu ID="NavMenu" runat="server" /> 
+                       
                    </div>
-                    
-                </nav>
+                    </nav>
 
             </div>
         
-
+ 
     
     <div class="uk-container uk-container-center">
     <div id="tm-main" class="tm-block-main">
