@@ -33,8 +33,7 @@
     <form id="mainForm" runat="server">
     <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <asp:Image ID="Image1" ImageUrl="~/images/ds_logo_header.gif" AlternateText="DollarSaver" runat="server" />
-         
+           
   <a href="~/Default.aspx">Home</a>
   <a href="#">Services</a>
   <a href="#">Clients</a>
@@ -47,12 +46,12 @@
            <div class="uk-grid">
             <div class="uk-width-medium-1-2">
              <div class="uk-hidden-small">
-             <asp:Image ID="Image5" ImageUrl="~/images/ds_logo_header.gif" AlternateText="DollarSaver" runat="server" /> <asp:Image ID="Image6" ImageUrl="~/images/local.gif" AlternateText="DollarSaver" runat="server"  />
+             <asp:Image ID="topperImage" ImageUrl="~/images/ds_logo_header.gif" AlternateText="DollarSaver" runat="server" /> <asp:Image ID="localSavingsImage" ImageUrl="~/images/local.gif" AlternateText="DollarSaver" runat="server"  />
              </div>
              <div class="uk-align-center uk-visible-small">
 <span class="uk-navbar-toggle uk-visible-small" style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;</span>
-             <asp:Image ID="Image3" ImageUrl="~/images/ds_logo_header.gif" AlternateText="DollarSaver" runat="server" />
-             <asp:Image ID="Image4" ImageUrl="~/images/local.gif" AlternateText="DollarSaver" runat="server"  />
+             <asp:Image ID="topperImagem" ImageUrl="~/images/ds_logo_header.gif" AlternateText="DollarSaver" runat="server" />
+             <asp:Image ID="localSavingsImagem" ImageUrl="~/images/local.gif" AlternateText="DollarSaver" runat="server"  />
              </div> 
             </div>
            <div class="uk-width-medium-1-2">

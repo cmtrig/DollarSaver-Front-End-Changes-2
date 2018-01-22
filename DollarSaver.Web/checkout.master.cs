@@ -66,11 +66,18 @@ namespace DollarSaver.Web {
                 if (!station.Content.IsTopperImageNull() && File.Exists(ImageDir + station.Content.TopperImage)) {
                     topperImage.ImageUrl = "~/" + station.ImageDirUrl + station.Content.TopperImage;
                 }
-
+                if (!station.Content.IsTopperImageNull() && File.Exists(ImageDir + station.Content.TopperImage))
+                {
+                    topperImagem.ImageUrl = "~/" + station.ImageDirUrl + station.Content.TopperImage;
+                }
+                if (!station.Content.IsLocalSavingsImageNull() && File.Exists(ImageDir + station.Content.LocalSavingsImage))
+                {
+                    localSavingsImagem.ImageUrl = "~/" + station.ImageDirUrl + station.Content.LocalSavingsImage;
+                }
                 if (!station.Content.IsLocalSavingsImageNull() && File.Exists(ImageDir + station.Content.LocalSavingsImage)) {
                     localSavingsImage.ImageUrl = "~/" + station.ImageDirUrl + station.Content.LocalSavingsImage;
                 }
-
+                
                 if (!station.Content.IsHeaderImageNull() && File.Exists(ImageDir + station.Content.HeaderImage)) {
                     headerImage.ImageUrl = "~/" + station.ImageDirUrl + station.Content.HeaderImage;
                 }

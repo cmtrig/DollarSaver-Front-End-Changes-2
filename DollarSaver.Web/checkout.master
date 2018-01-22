@@ -32,11 +32,11 @@
            <div class="uk-grid">
             <div class="uk-width-medium-1-2">
              <div class="uk-hidden-small">
-             <asp:Image ID="Image5" ImageUrl="~/images/ds_logo_header.gif" AlternateText="DollarSaver" runat="server" /> <asp:Image ID="Image6" ImageUrl="~/images/local.gif" AlternateText="DollarSaver" runat="server"  />
+             <asp:Image ID="topperImage" ImageUrl="~/images/ds_logo_header.gif" AlternateText="DollarSaver" runat="server" /> <asp:Image ID="localSavingsImage" ImageUrl="~/images/local.gif" AlternateText="DollarSaver" runat="server"  />
              </div>
              <div class="uk-visible-small">
-             <div class="uk-text-center"><asp:Image ID="Image3" ImageUrl="~/images/ds_logo_header.gif" AlternateText="DollarSaver" runat="server" />
-             <asp:Image ID="Image4" ImageUrl="~/images/local.gif" AlternateText="DollarSaver" runat="server"  />
+             <div class="uk-text-center"><asp:Image ID="topperImagem" ImageUrl="~/images/ds_logo_header.gif" AlternateText="DollarSaver" runat="server" />
+             <asp:Image ID="localSavingsImagem" ImageUrl="~/images/local.gif" AlternateText="DollarSaver" runat="server"  />
              </div>
              </div> 
             </div>

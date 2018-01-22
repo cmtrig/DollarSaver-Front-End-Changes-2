@@ -42,7 +42,7 @@
 	</div>
     <div class="uk-width-medium-1-2 uk-align-center">
         
-   <table cellpadding="0" cellspacing="0" border="0" style="width: 105%;">
+   <table cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
                             <tr>
                                 <td align="center">
                                     <asp:PlaceHolder ID="dailyWeeklyImageHolder" runat="server" />
