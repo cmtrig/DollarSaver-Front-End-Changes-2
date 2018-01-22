@@ -106,21 +106,11 @@
                  <asp:HyperLink ID="headerLink" runat="server">
                                     <asp:Image ID="headerImage" ImageUrl="~/images/header.jpg" BorderWidth="0" runat="server" />
                                     </asp:HyperLink></div> 
-               <nav class="tm-navbar-container">
+          <nav class="tm-navbar-container">
                    <div class="tm-nav uk-hidden-small">
-                      <ul id="css3menu1" class="topmenu">
-	<li class="topfirst"><a href="#" style="height:19px;line-height:19px;">Home</a></li>
-	<li class="topmenu"><a href="#" style="height:19px;line-height:19px;"><span>Item 1</span></a>
-	<ul>
-		<li><a href="#">Item 1 0</a></li>
-		<li><a href="#">Item 1 1</a></li>
-		<li><a href="#">Item 1 2</a></li>
-	</ul></li>
-	<li class="toplast"><a href="#" style="height:19px;line-height:19px;">Item 2</a></li>
-</ul> <DollarSaver:NavMenu ID="NavMenu" runat="server" /> 
-                       
-                   </div>
-                    </nav>
+                    <DollarSaver:NavMenu ID="NavMenu" runat="server" /> 
+               </div>
+          </nav>
 
             </div>
      
