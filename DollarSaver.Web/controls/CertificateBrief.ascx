@@ -87,7 +87,7 @@
                                                                     <!--
                                                                         <asp:Button ID="addToCartButtony" Text="ADD TO CART" runat="server" />
                                                                         --> 
-                                                                        <asp:ImageButton ID="addToCartButton" ImageUrl="~/images/button_addtocart.gif" AlternateText="Add To Cart" runat="server" />
+                                                                        <asp:ImageButton ID="addToCartButton" ImageUrl="~/images/add-to-cart.png" AlternateText="Add To Cart" runat="server" />
                                                                        
                                                                     </td>
                                                                 </tr>

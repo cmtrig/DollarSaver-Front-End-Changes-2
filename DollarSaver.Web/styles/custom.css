@@ -83,7 +83,14 @@ form {
     color: #404040;
 }
 @media (max-width: 768px) {
-
+    .tm-block-main {
+        
+        padding: 0;
+    }
+    #main {
+        
+        padding: 2px;
+    }
  .heading_two {
         font-size: 12px;
         font-weight: 600;
@@ -206,7 +213,7 @@ table.ds_table {
 .other_input {
     font-size: 12px;
     padding: 1px;
-    width: 170px !important;
+    max-width: 170px !important;
 }
 
     .small_input {

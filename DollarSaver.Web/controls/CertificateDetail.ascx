@@ -64,7 +64,7 @@
                                             <!--
                                                 <asp:Button ID="addToCartButtonx" Text="ADD TO CART" runat="server" />
                                                 -->
-                                                <asp:ImageButton ID="addToCartButton" ImageUrl="~/images/button_addtocart.gif" AlternateText="Add To Cart" runat="server" />
+                                                <asp:ImageButton ID="addToCartButton" ImageUrl="~/images/add-to-cart.png" AlternateText="Add To Cart" runat="server" />
                                             </div>
                                          </asp:PlaceHolder>
                                             </div>

@@ -1,13 +1,13 @@
 <%@ Control Language="C#" AutoEventWireup="true" Inherits="DollarSaver.Web.controls.CertificateSummary" Codebehind="CertificateSummary.ascx.cs" %>
 <%@ Register Src="~/controls/Name.ascx" TagPrefix="DollarSaver" TagName="Name" %>
 <asp:PlaceHolder ID="certHolder" runat="server" >
-<table class="uk-align-center sumtable" cellpadding="5" cellspacing="0" border="0" style="border: solid 5px #F0F0F0; width: 93%;" id="mainTable" runat="server" >
+<table class="uk-align-center sumtable" cellpadding="5" cellspacing="0" border="0" style="border: solid 5px #F0F0F0; width: 100%;" id="mainTable" runat="server" >
     <tr>
         <td valign="top">
-            <table cellpadding="5" cellspacing="0" border="0">
+            <table cellpadding="0" cellspacing="0" border="0">
                 <tr>
                     <td style="padding: 0px;">
-                        <table cellpadding="5" cellspacing="0" border="0" style="width: 100%;">
+                        <table cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
                             <tr>
                                 <td style="width: 135px; text-align: center;">
                                     <asp:HyperLink ID="advertiserImageLink" runat="server" >
@@ -93,7 +93,7 @@
                                 <!--
                                     <asp:Button ID="addToCartButtonz" Text="ADD TO CART" runat="server" />
                                 -->
-                                    <asp:ImageButton ID="addToCartButton" ImageUrl="~/images/BUTTON_AddToCart.gif" AlternateText="Add To Cart" runat="server" />
+                                    <asp:ImageButton ID="addToCartButton" ImageUrl="~/images/add-to-cart.png" AlternateText="Add To Cart" runat="server" />
                                     
                                 </td>
                             </tr>
